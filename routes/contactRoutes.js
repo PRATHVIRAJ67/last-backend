@@ -8,7 +8,7 @@ const {
 
 const router = express.Router();
 
-// Routes
+
 router.post('/', createContact);
 router.get('/', getContacts);
 router.put('/:id', updateContact);

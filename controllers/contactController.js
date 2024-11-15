@@ -1,6 +1,6 @@
 const Contact = require('../models/Contact');
 
-// Create a new contact
+
 const createContact = async (req, res) => {
   try {
     const contact = new Contact(req.body);
@@ -11,7 +11,7 @@ const createContact = async (req, res) => {
   }
 };
 
-// Get all contacts
+
 const getContacts = async (req, res) => {
   try {
     const contacts = await Contact.find();
@@ -21,7 +21,7 @@ const getContacts = async (req, res) => {
   }
 };
 
-// Update a contact by ID
+
 const updateContact = async (req, res) => {
   try {
     const contact = await Contact.findByIdAndUpdate(req.params.id, req.body, {
@@ -35,7 +35,7 @@ const updateContact = async (req, res) => {
   }
 };
 
-// Delete a contact by ID
+
 const deleteContact = async (req, res) => {
   try {
     const contact = await Contact.findByIdAndDelete(req.params.id);
